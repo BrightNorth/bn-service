@@ -1,4 +1,5 @@
 (ns {{name}}.core
+  (:gen-class :main true)
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [{{name}}.db :refer :all]
@@ -23,6 +24,11 @@
 
 ;; Ring port
 (def PORT (config :port))
+
+
+;; Reference to the running server
+(def svr (atom nil))
+
 
 ;; Set of headers returned by resources; set up to allow COR requests.
 (defonce cors-headers
@@ -51,27 +57,26 @@
 
 (defn post-init!
   []
-  (migrate!)
-  (info "{{name}} started on port" PORT))
-
-
-
-(defn wrap-app [app-routes] 
-  (-> app-routes
-      (wrap-reload '{{name}}.core)
-      (wrap-params)))
+  (migrate!))
 
 
 (def handler
   "Represents the wrapped set of configured routes and handlers - WITHOUT starting the server or post-init!"
-  (let [wrapped (wrap-app app-routes)]        
-    (handler/site wrapped)))
+  (handler/api app-routes))
+
+
+(defn stop-server
+  "Stop the server"
+  []
+  (info "{{name}} stopping")
+  (.stop @svr))
 
 
 (defn start-server []
   "Call this from the REPL to setup the DB and start the server"
-  (run-jetty handler {:port PORT :join? false})
-  (post-init!))
+  (swap! svr (fn [_] (run-jetty handler {:port PORT :join? false})))
+  (post-init!)
+  (info "{{name}} started on port" PORT))
 
 
 (defn -main [& args]

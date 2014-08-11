@@ -15,8 +15,8 @@ Create the DB as follows:
 
 ```
 mysql -uroot -p <enter> <enter>
-create database {{name}};
-grant all on {{name}}.* to '{{name}}'@'localhost' identified by '{{name}}';
+create database {{sanitized}};
+grant all on {{sanitized}}.* to '{{sanitized}}'@'localhost' identified by '{{sanitized}}';
 flush privileges;
 ```
 
@@ -35,11 +35,10 @@ lein repl
 and init the application manually:
 
 ```
-(use '{{name}}.core)
-(def svr (start-server))
+(start-server)
 ```
 
-(this last gives you a ref to the Jetty server that you can use to (.stop svr) and (.start svr)
+(this saves you a ref to the Jetty server that you can use to (stop-server) and (start-server)
 
 ## Testing
 
