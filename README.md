@@ -1,3 +1,5 @@
+[![Clojars Project](http://clojars.org/bn-service/lein-template/latest-version.svg)](http://clojars.org/bn-service/lein-template)
+
 # bn-service
 
 A leiningen template for building Clojure microservices.
