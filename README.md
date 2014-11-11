@@ -1,14 +1,14 @@
 # bn-service
 
-A Clojure library designed to ... well, that part is up to you.
+A leiningen template for building Clojure microservices.
 
 ## Usage
 
-FIXME
+    lein new bn-service <your-project-name>
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Bright North Ltd.
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
