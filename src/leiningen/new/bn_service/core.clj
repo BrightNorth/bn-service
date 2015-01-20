@@ -15,7 +15,6 @@
    [ring.middleware.cors :refer [wrap-cors]]
    [ring.middleware.json :refer :all]
    [ring.middleware.params :refer :all]
-   [ring.middleware.reload :refer :all]
    [ring.util.response :refer [response header content-type]]
    [ring.util.response]
    [{{name}}.db :refer :all]
