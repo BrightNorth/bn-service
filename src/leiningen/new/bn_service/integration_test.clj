@@ -1,6 +1,6 @@
 (ns {{name}}.integration-test
   (:use midje.sweet)
-  (:require [clj-http.client :as client :refer [get post put]]
+  (:require [clj-http.client :as client]
             [{{name}}.core :refer :all]
             [{{name}}.db :refer :all]))
 
