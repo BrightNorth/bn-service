@@ -18,7 +18,6 @@
                  [org.clojure/tools.logging "0.3.1"]
                  [org.eclipse.jetty/jetty-server "7.6.8.v20121106"] ;; don't upgrade because ring-jetty-adapter
                  [org.eclipse.jetty/jetty-servlet "7.6.8.v20121106"] ;; don't upgrade because ring-jetty-adapter
-                 [org.slf4j/slf4j-simple "1.7.10"]
                  [ring/ring-jetty-adapter "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]]
