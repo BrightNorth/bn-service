@@ -35,9 +35,9 @@
 
 (defroutes app-routes
   (ANY "/thing" [] thing-resource)
-  (GET "/" [] (GET "/" [] {:status  200
-                           :headers {"Content-Type" "text/html; charset=utf-8"}
-                           :body    "<html><body><h1>{{name}}</h1></body></html>"}))
+  (GET "/" [] {:status  200
+               :headers {"Content-Type" "text/html; charset=utf-8"}
+               :body    "<html><body><h1>{{name}}</h1></body></html>"})
   (route/resources "/")
   (route/not-found "Not Found"))
 
