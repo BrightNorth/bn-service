@@ -46,5 +46,5 @@
 
   :aliases {"test" ["do" "clean" ["with-profile" "+test" "midje"]]}
 
-  )
-
+  :repositories [["snapshots" {:url "http://nexus.brightnorth.co.uk/content/repositories/snapshots" :password :env :username :env}]
+                 ["releases" {:url "http://nexus.brightnorth.co.uk/content/repositories/releases" :password :env :username :env}]])
