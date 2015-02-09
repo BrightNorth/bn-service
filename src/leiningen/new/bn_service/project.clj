@@ -16,8 +16,8 @@
                  [mysql/mysql-connector-java "5.1.34"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.logging "0.3.1"]
-                 [org.eclipse.jetty/jetty-server "7.6.8.v20121106"] ;; don't upgrade because ring-jetty-adapter
-                 [org.eclipse.jetty/jetty-servlet "7.6.8.v20121106"] ;; don't upgrade because ring-jetty-adapter
+                 [org.eclipse.jetty/jetty-server "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
+                 [org.eclipse.jetty/jetty-servlet "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
                  [ring/ring-jetty-adapter "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]]
