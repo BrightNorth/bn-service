@@ -29,7 +29,7 @@
             [brightnorth/uberjar-deploy "1.0.1"]]
 
   :ring {:handler {{name}}.core/handler
-                  :init {{name}}.core/post-init!
+         :init {{name}}.core/post-init!
          :port    4000}
 
   :jvm-opts ["-Dconfig=application.conf"]
