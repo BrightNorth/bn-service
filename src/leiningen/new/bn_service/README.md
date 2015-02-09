@@ -37,7 +37,7 @@ and init the application manually:
 
 ## Testing
 
-For unit testing we are using midje (https://github.com/marick/Midje). To execute unit tests run:
+For unit testing we are using [midje](https://github.com/marick/Midje). To execute unit tests run:
 
     lein test
 
