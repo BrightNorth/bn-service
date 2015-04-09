@@ -5,15 +5,15 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[cheshire "5.4.0"]
-                 [clj-http "1.0.1"]
+                 [clj-http "1.1.0"]
                  [clj-time "0.9.0"]
                  [com.googlecode.flyway/flyway-core "2.3.1"]
-                 [compojure "1.3.1"]
+                 [compojure "1.3.3"]
                  [conf-er "1.0.1"]
                  [korma "0.4.0"]
                  [liberator "0.12.2"]
                  [log4j/log4j "1.2.17" :exclusions [javax.mail/mail javax.jms/jms com.sun.jdmk/jmxtools com.sun.jmx/jmxri]]
-                 [mysql/mysql-connector-java "5.1.34"]
+                 [mysql/mysql-connector-java "5.1.35"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.logging "0.3.1"]
                  [org.eclipse.jetty/jetty-server "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
@@ -22,10 +22,9 @@
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]]
 
-  :plugins [[lein-ancient "0.6.0"]
-            [lein-midje "3.1.3"]
+  :plugins [[lein-midje "3.1.3"]
             [lein-release "1.1.3"]
-            [lein-ring "0.9.1"]
+            [lein-ring "0.9.3"]
             [brightnorth/uberjar-deploy "1.0.1"]]
 
   :ring {:handler {{name}}.core/handler
