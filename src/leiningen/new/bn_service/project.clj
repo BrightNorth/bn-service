@@ -44,4 +44,3 @@
                                    [ring/ring-devel "1.3.2"]]}}
 
   :aliases {"test" ["do" "clean" ["with-profile" "+test" "midje"]]})
-
