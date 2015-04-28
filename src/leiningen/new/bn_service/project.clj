@@ -43,7 +43,5 @@
                                    [midje "1.6.3"]
                                    [ring/ring-devel "1.3.2"]]}}
 
-  :aliases {"test" ["do" "clean" ["with-profile" "+test" "midje"]]}
+  :aliases {"test" ["do" "clean" ["with-profile" "+test" "midje"]]})
 
-  ***REMOVED***
-***REMOVED***)
