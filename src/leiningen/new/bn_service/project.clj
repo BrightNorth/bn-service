@@ -5,10 +5,9 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[cheshire "5.4.0"]
-                 [clj-http "1.1.0"]
+                 [clj-http "1.1.2"]
                  [clj-time "0.9.0"]
-                 [com.googlecode.flyway/flyway-core "2.3.1"]
-                 [compojure "1.3.3"]
+                 [compojure "1.3.4"]
                  [conf-er "1.0.1"]
                  [korma "0.4.0"]
                  [liberator "0.12.2"]
@@ -18,6 +17,9 @@
                  [org.clojure/tools.logging "0.3.1"]
                  [org.eclipse.jetty/jetty-server "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
                  [org.eclipse.jetty/jetty-servlet "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
+                 [org.flywaydb/flyway-core "3.2.1"]
+                 [org.slf4j/slf4j-api "1.7.12"]
+                 [org.slf4j/slf4j-log4j12 "1.7.12"]
                  [ring/ring-jetty-adapter "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]]
