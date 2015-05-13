@@ -51,7 +51,7 @@ You can release the application with:
 
 Configuration options are now loaded from a configuration file. For dev this is set to pickup `application.conf` in the root dorectory.
 
-If you run it with jar you need to provide path to configuration file using `DConfig option`:
+If you run it with jar you need to provide path to configuration file using `-Dconfig option`:
 
     java -Dconfig=application.conf -jar target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
 

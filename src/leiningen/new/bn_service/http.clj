@@ -3,9 +3,9 @@
 
 
 (defonce cors-headers
-  {"Access-Control-Allow-Origin"  #".*"
-   "Access-Control-Allow-Methods" [:get :put :post :delete :options]
-   "Access-Control-Allow-Headers" "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept, Authorization"})
+  ["X-Requested-With" "Origin" "X-Csrftoken" "Content-Type" "Accept" "accept"
+   "origin" "Access-Control-Request-Method" "Access-Control-Request-Headers"
+   "Authorization" "content-type" "auth-token" "Content-Disposition"])
 
 
 (defn handle-exception

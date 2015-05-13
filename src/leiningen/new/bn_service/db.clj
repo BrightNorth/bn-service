@@ -4,8 +4,8 @@
    [conf-er :refer [config]]
    [korma.core :refer :all]
    [korma.db :refer :all])
-  (:import com.googlecode.flyway.core.Flyway
-   com.googlecode.flyway.core.exception.FlywayException))
+  (:import org.flywaydb.core.Flyway
+           org.flywaydb.core.api.FlywayException))
 
 
 (def db-config (config :database))
@@ -24,9 +24,9 @@
     (info "Running migrations for user:" user "with url:" db-url "into:" table)
     (.setTable flyway table)
     (.setLocations flyway (into-array ["migrations"]))
-    (.setDataSource flyway db-url user password)
+    (.setDataSource flyway db-url user password (make-array String 0))
     (try
-      (.init flyway)
+      (.baseline flyway)
       (catch FlywayException e
         (warn "Caught exception in Flyway init:" (.getMessage e))))
     (let [count (.migrate flyway)]
