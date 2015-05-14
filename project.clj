@@ -1,4 +1,4 @@
-(defproject bn-service/lein-template "1.0.3"
+(defproject bn-service/lein-template "1.0.4"
 
   :description "Skeleton for a Clojure microservice"
 
