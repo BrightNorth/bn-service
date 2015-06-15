@@ -4,14 +4,15 @@
 
   :url "http://example.com/FIXME"
 
-  :dependencies [[cheshire "5.4.0"]
+  :dependencies [[ch.qos.logback/logback-core "1.1.3"]
+                 [ch.qos.logback/logback-classic "1.1.3"]
+                 [cheshire "5.4.0"]
                  [clj-http "1.1.2"]
                  [clj-time "0.9.0"]
                  [compojure "1.3.4"]
                  [conf-er "1.0.1"]
                  [korma "0.4.0"]
                  [liberator "0.12.2"]
-                 [log4j/log4j "1.2.17" :exclusions [javax.mail/mail javax.jms/jms com.sun.jdmk/jmxtools com.sun.jmx/jmxri]]
                  [mysql/mysql-connector-java "5.1.35"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.logging "0.3.1"]
@@ -19,7 +20,6 @@
                  [org.eclipse.jetty/jetty-servlet "7.6.8.v20121106"] ;; don't upgrade past v7 until https://github.com/ring-clojure/ring/issues/183
                  [org.flywaydb/flyway-core "3.2.1"]
                  [org.slf4j/slf4j-api "1.7.12"]
-                 [org.slf4j/slf4j-log4j12 "1.7.12"]
                  [ring/ring-jetty-adapter "1.3.2"]
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]]
