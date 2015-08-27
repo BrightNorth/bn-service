@@ -1,4 +1,4 @@
-# bn-webapp
+# bn-service
 
 A Leiningen template for creating Bright North's standard API services
 
